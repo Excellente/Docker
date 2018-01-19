@@ -1,0 +1,10 @@
+docker-machine ssh Char
+
+docker swarm init --advertise-addr 192.168.99.100
+Swarm initialized: current node (otfgwmq6vn14l199rnrokq1pf) is now a manager.
+
+To add a worker to this swarm, run the following command:
+
+    docker swarm join --token SWMTKN-1-2pidnoeow225rdkusdykmgosrs90kmlhe03nxuu5x4ayq261n4-e6x2lzod0y04fb6egb2tz18a5 192.168.99.100:2377
+
+To add a manager to this swarm, run 'docker swarm join-token manager' and follow the instructions.

@@ -1,0 +1,2 @@
+mkdir ~/Desktop/HOME; docker run --name Abathur -p 3000:80 -v ~/Library/Containers/ python // noy yet working
+Docker Root Dir: /mnt/sda1/var/lib/docker
