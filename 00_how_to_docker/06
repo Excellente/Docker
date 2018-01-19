@@ -1,1 +1,1 @@
-docker run --name overload --autorestart ALWAYS -p 80:5000 -P -d nginx // not yet working: not tested
+docker run --restart=unless-stopped --name=overload -d -p 5000:80 nginx
