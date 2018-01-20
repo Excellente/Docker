@@ -1,2 +1,11 @@
-mkdir ~/Desktop/HOME; docker run --name Abathur -p 3000:80 -v ~/Library/Containers/ python // noy yet working
-Docker Root Dir: /mnt/sda1/var/lib/docker
+#!/bin/sh
+docker run --name Abathur -dt -p 3000:3000 -v /goinfre/emsimang/Desktop/HOME:/root python:2-slim
+docker exec Abathur pip install flask
+docker exec Abathur bash -c "echo -e 'from flask import Flask
+app = Flask(__name__)
+\n\n@app.route(\"/\")
+\ndef hello():\n\t
+    return \"<h1> Hello World </h1>\"
+    
+\n\nif __name__ == \"__main__\":
+    \n\tapp.run()' > /root/hello.py"
